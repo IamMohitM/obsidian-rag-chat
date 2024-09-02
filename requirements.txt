@@ -1,0 +1,7 @@
+lancedb
+pandas
+pyarrow
+llama-index
+python-dotenv
+llama-index-embeddings-azure-openai
+llama-index-llms-azure-openai
