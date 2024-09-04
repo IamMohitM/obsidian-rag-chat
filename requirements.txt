@@ -5,3 +5,6 @@ llama-index
 python-dotenv
 llama-index-embeddings-azure-openai
 llama-index-llms-azure-openai
+llama-index-readers-obsidian
+llama-index-vector-stores-lancedb
+watchdog
