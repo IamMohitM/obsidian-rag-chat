@@ -3,11 +3,9 @@ import os
 import logging
 import sys
 import atexit
-import signal
 
 from watchdog.observers import Observer
 from llama_index.core import VectorStoreIndex, StorageContext, Settings
-from llama_index.readers.obsidian import ObsidianReader
 from llama_index.readers.file import MarkdownReader
 
 from llama_index.core import load_index_from_storage
@@ -176,10 +174,11 @@ class VectorDatabaseUpdater:
         
 if __name__ == "__main__":
     ignore_patterns = [".obsidian/*"]
-    path = os.path.join("/Users/mo/Library/Mobile Documents/iCloud~md~obsidian/Documents/MainVault/TechNotes")
+    path = path = os.environ.get("TECH_NOTES_PATH")
+    
     persist_dir = "./data/tech_notes"
     uri = "./data/obsidian_lancdb"
-    table_name = 'vectors'
+    
     
     update_llama_index_settings()
     

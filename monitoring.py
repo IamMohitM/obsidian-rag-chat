@@ -69,7 +69,5 @@ def watch_directory(path, ignore_patterns, interval=10):
 
 if __name__ == "__main__":
     ignore_patterns = [".obsidian/*"]
-    path = os.path.join(
-        "/Users/mo/Library/Mobile Documents/iCloud~md~obsidian/Documents/MainVault"
-    )
+    path = os.environ.get("TRACK_PATH")
     watch_directory(path, ignore_patterns)
